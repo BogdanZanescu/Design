@@ -1,28 +1,28 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include<iostream>
+ 
+using namespace std;
+ 
+main()
+{
+int n, c, I = 0, II = 1, next;
+ 
+cout << "How many steps?" << endl;
+cin >> n;
+ 
+cout << "I " << n << " Fibonacci series  " << endl;
+ 
+for ( c = 0 ; c < n ; c++ )
+ {
+ if ( c <= 1 )
+ next = c;
+ else
+ {
+ next = I + II;
+I = II;
+ II = I;
+ }
+ cout << next << endl;
+}
+ 
+return 0;
+}
